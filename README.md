@@ -7,6 +7,8 @@ I used Rails to generate a new web application with a basic structure. I then re
 
 For database configuration, I created 3 databases in total, one each for development, testing, and production. It was unnecessary to create 3 databases, but made it simpler to follow the tutorial. These three databases are: addressdemo_development, addressdemo_test, and addressdemo_production. A user was created on my machine called rubyuser. If you would like to use a different user in testing, the database.yml file inside of the folder config will need to be modified. 
 
+I did not get to using scaffolding for this project as the tutorial talked about scaffolding tools last, after I had already finished the application. 
+
 Rails version: 5.0.0.1
 Ruby version:  2.3.1p112
 Postgresql version: 9.5.5
