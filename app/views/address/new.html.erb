@@ -1,0 +1,23 @@
+<!-- Html view file for creating new addresses -->
+<h1>Add new address</h1>
+
+<%= form_tag :action => 'create' do %>
+<p><label for = "address_street_address">Street Address</label>:
+<%= text_field 'addresses', 'street_address' %></p>
+
+<p><label for = "address_city">City</label>:
+<%= text_field 'addresses', 'city' %></p>
+
+<p><label for = "address_state">State</label>:
+<%= text_field 'addresses', 'state' %></p>
+
+<p><label for = "address_zip">Zip</label>: (must be number)
+<%= text_field 'addresses', 'zip' %></p>
+
+<p><label for = "address_person_id">Person</label>:
+<%= collection_select(:addresses, :person_id, Person.all, :id, :full_name, prompt: true) %></p>
+
+<%= submit_tag "Create" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'list'} %>

@@ -1,0 +1,17 @@
+<!-- view file for viewing a single person -->
+<% if @addresses.blank? %>
+<p>There are not any addresses for this person currently in the system.</p>
+<% else %>
+<p>These are the current addresses for this person in our system</p>
+<p>
+
+   <% @addresses.each do |c| %>
+   <b><%= c.street_address -%></b>
+   <b><%= c.city + ", " + c.state + " " + c.zip.to_s -%></b><br/>
+   <% end %>
+</p>
+
+<hr />
+<% end -%>
+
+<%= link_to 'Back', {:action => 'list'} %>

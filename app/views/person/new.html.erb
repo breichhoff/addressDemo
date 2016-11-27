@@ -1,0 +1,17 @@
+<!-- view file for creating new people -->
+<h1>Add new person</h1>
+
+<%= form_tag :action => 'create' do %>
+<p><label for = "person_first_name">First Name</label>:
+<%= text_field 'people', 'first_name' %></p>
+
+<p><label for = "person_middle_name">Middle Name</label>:
+<%= text_field 'people', 'middle_name' %></p>
+
+<p><label for = "person_last_name">Last Name</label>:
+<%= text_field 'people', 'last_name' %></p>
+
+<%= submit_tag "Create" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'list'} %>

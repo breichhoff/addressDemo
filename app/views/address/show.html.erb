@@ -1,0 +1,12 @@
+<!-- View file for viewing a single address -->
+<p>
+   <strong>Street Address: </strong> <%= @address.street_address %><br />
+   <strong>City: </strong> <%= @address.city %><br />
+   <strong>State :</strong> <%= @address.state %><br />
+   <strong>Zip:</strong> <%= @address.zip %><br />
+   <strong>Owner:</strong> <%= @address.person.full_name %><br />
+</p>
+
+<hr />
+
+<%= link_to 'Back', {:action => 'list'} %>
