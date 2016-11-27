@@ -1,8 +1,8 @@
 <!-- view file for viewing a single person -->
 <% if @addresses.blank? %>
-<p>There are not any addresses for this person currently in the system.</p>
+<p>There are not any addresses for <%= @person.full_name %> currently in the system.</p>
 <% else %>
-<p>These are the current addresses for this person in our system</p>
+<p>These are the current addresses for <%= @person.full_name %> in our system</p>
 <p>
 
    <% @addresses.each do |c| %>
